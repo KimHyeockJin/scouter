@@ -141,7 +141,7 @@ public class Watch {
                 arg = mirror.getProcFile(arg);
                 add(sigar, watcher, arg, false);
             }
-            else if (arg.equals("-r")) {
+            else if ("-r".equals(arg)) {
                 recurse = true;
             }
             else {

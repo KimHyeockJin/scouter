@@ -84,7 +84,7 @@ public class JarOptimizer {
         }
 
         int argIndex = 1;
-        if (args[argIndex].equals("-nodebug")) {
+        if ("-nodebug".equals(args[argIndex])) {
             nodebug = true;
             argIndex++;
         }

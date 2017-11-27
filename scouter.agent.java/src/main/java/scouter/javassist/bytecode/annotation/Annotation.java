@@ -149,9 +149,9 @@ public class Annotation {
             return new FloatMemberValue(cp);
         else if (type == CtClass.doubleType)
             return new DoubleMemberValue(cp);
-        else if (type.getName().equals("java.lang.Class"))
+        else if ("java.lang.Class".equals(type.getName()))
             return new ClassMemberValue(cp);
-        else if (type.getName().equals("java.lang.String"))
+        else if ("java.lang.String".equals(type.getName()))
             return new StringMemberValue(cp);
         else if (type.isArray()) {
             CtClass arrayType = type.getComponentType();

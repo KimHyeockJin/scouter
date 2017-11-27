@@ -149,7 +149,7 @@ public class MainProcessor{
 	
 	public void processMenu(String menuName){
         System.out.println("Selected:" + menuName);
-        if ( menuName.substring(1, 3).equals(":\\") ) {
+        if ( ":\\".equals(menuName.substring(1, 3)) ) {
         //    openFiles(new File[] { new File(menuName) }, true);
         } else if ( "Open Stack Log".equals(menuName) ) {  	
             chooseStackFile();

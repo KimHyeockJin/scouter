@@ -108,7 +108,7 @@ public class Generator {
 
 	public static String getInnerString(Method m) {
 		try {
-			boolean isVoid = getTypeName(m.getReturnType()).equals("void");
+			boolean isVoid = "void".equals(getTypeName(m.getReturnType()));
 			StringBuilder sb = new StringBuilder();
 			if (isVoid == false)
 				sb.append("return ");

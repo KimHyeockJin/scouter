@@ -84,11 +84,11 @@ class CallRunnableCV extends ClassVisitor implements Opcodes {
 			return mv;
 		}
 
-		if (name.equals("call") || name.equals("run")) {
+		if ("call".equals(name) || "run".equals(name)) {
 			return new CallOrRunMV(access, name, desc, mv);
 		}
 
-		if (name.equals("<init>")) {
+		if ("<init>".equals(name)) {
 			return new InitMV(access, name, desc, mv);
 		}
 

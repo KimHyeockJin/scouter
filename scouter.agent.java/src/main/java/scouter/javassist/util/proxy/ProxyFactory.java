@@ -635,7 +635,7 @@ public class ProxyFactory {
 
     protected ClassLoader getClassLoader0() {
         ClassLoader loader = null;
-        if (superClass != null && !superClass.getName().equals("java.lang.Object"))
+        if (superClass != null && !"java.lang.Object".equals(superClass.getName()))
             loader = superClass.getClassLoader();
         else if (interfaces != null && interfaces.length > 0)
             loader = interfaces[0].getClassLoader();
@@ -655,7 +655,7 @@ public class ProxyFactory {
 
     protected ProtectionDomain getDomain() {
         Class clazz;
-        if (superClass != null && !superClass.getName().equals("java.lang.Object"))
+        if (superClass != null && !"java.lang.Object".equals(superClass.getName()))
             clazz = superClass;
         else if (interfaces != null && interfaces.length > 0)
             clazz = interfaces[0];

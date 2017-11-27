@@ -99,9 +99,9 @@ public class ApiDebugView extends ViewPart  {
 					String key = StringUtil.removeWhitespace(keyValue[0].split(":")[1]);
 					String value = StringUtil.removeWhitespace(keyValue[1]);
 					
-					if(type.equals("I")){
+					if("I".equals(type)){
 						param.put(key, CastUtil.clong(value));	
-					}else if(type.equals("S")){
+					}else if("S".equals(type)){
 						param.put(key, value);		
 					}
 				}

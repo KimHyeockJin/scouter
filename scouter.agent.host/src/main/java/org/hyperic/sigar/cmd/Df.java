@@ -100,7 +100,7 @@ public class Df extends SigarCommandBase {
             FileSystemMap mounts = this.proxy.getFileSystemMap();
             for (int i=0; i<args.length; i++) {
                 String arg = args[i];
-                if (arg.equals("-i")) {
+                if ("-i".equals(arg)) {
                     this.opt_i = true;
                     continue;
                 }

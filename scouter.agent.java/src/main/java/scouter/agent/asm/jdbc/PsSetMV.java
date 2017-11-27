@@ -74,7 +74,7 @@ public class PsSetMV extends LocalVariablesSorter implements Opcodes {
 		mv.visitFieldInsn(GETFIELD, owner, TraceSQL.PSTMT_PARAM_FIELD, "Lscouter/agent/trace/SqlParameter;");
 		mv.visitVarInsn(Opcodes.ILOAD, 1);
 
-		if (name.equals("setNull")) {
+		if ("setNull".equals(name)) {
 			AsmUtil.PUSH(mv, (String) null);
 			mv.visitMethodInsn(Opcodes.INVOKESTATIC, TRACESQL, "set", "(Lscouter/agent/trace/SqlParameter;ILjava/lang/String;)V",false);
 		} else {

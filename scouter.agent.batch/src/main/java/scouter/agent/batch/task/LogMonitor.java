@@ -67,7 +67,7 @@ public class LogMonitor extends Thread {
 			listSize = list.length;
 			for(File file :list){
 				fileName = file.getName();
-				if(fileName.equals(".") || fileName.equals("..")){
+				if(".".equals(fileName) || "..".equals(fileName)){
 					deleteSize++;
 					continue;
 				}

@@ -242,7 +242,7 @@ public class ParserConfigReader extends XMLReader {
 
                 for ( int ii = 0; ii < listList.getLength(); ii++ ) {
                     node = listList.item(ii);
-                    if ( !node.getNodeName().equals("list") )
+                    if ( !"list".equals(node.getNodeName()) )
                         continue;
                     returnList.add(node.getFirstChild().getNodeValue());
                 }

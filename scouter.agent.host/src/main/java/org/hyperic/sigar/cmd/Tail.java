@@ -45,7 +45,7 @@ public class Tail {
                 continue;
             }
             arg = arg.substring(1);
-            if (arg.equals("f")) {
+            if ("f".equals(arg)) {
                 this.follow = true;
             }
             else if (Character.isDigit(arg.charAt(0))) {

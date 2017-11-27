@@ -179,11 +179,11 @@ public class ParserConfig {
     		throw new RuntimeException("preProcessor target attribute of preprocessor is not exist!");
     	}
     	
-		if(target.equals("header")){
+		if("header".equals(target)){
 			m_stackPreprocessorTarget = Processor.TARGET.HEADER;
-		}else if(target.equals("stack")){
+		}else if("stack".equals(target)){
 			m_stackPreprocessorTarget = Processor.TARGET.STACK;
-		}else if(target.equals("all")){
+		}else if("all".equals(target)){
 			m_stackPreprocessorTarget = Processor.TARGET.ALL;
 		}else{
 			throw new RuntimeException("preProcessor target (header/stack/all) of preprocessor is wrong(" + target + ")!");

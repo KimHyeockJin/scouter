@@ -83,7 +83,7 @@ public class DateUtil {
 	}
 
 	public static long getTime(String date, String format) {
-		if (format.equals("yyyyMMdd"))
+		if ("yyyyMMdd".equals(format))
 			return helper.yyyymmdd(date);
 		try {
 			SimpleDateFormat sdf = parsers.get(format);
@@ -102,7 +102,7 @@ public class DateUtil {
 	private static Hashtable<String, SimpleDateFormat> parsers = new Hashtable();
 
 	public static String format(long stime, String format) {
-		if (format.equals("yyyyMMdd"))
+		if ("yyyyMMdd".equals(format))
 			return helper.yyyymmdd(stime);
 
 		SimpleDateFormat sdf = parsers.get(format);
@@ -116,7 +116,7 @@ public class DateUtil {
 	}
 
 	public static String format(long stime, String format, Locale locale) {
-		if (format.equals("yyyyMMdd"))
+		if ("yyyyMMdd".equals(format))
 			return helper.yyyymmdd(stime);
 
 		SimpleDateFormat sdf = parsers.get(format + locale.getCountry());
@@ -130,7 +130,7 @@ public class DateUtil {
 	}
 
 	public static long parse(String date, String format) {
-		if (format.equals("yyyyMMdd"))
+		if ("yyyyMMdd".equals(format))
 			return helper.yyyymmdd(date);
 
 		SimpleDateFormat sdf = parsers.get(format);

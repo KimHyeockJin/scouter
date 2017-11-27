@@ -218,7 +218,7 @@ public class FactoryHelper {
         int pos = filename.lastIndexOf(File.separatorChar);
         if (pos > 0) {
             String dir = filename.substring(0, pos);
-            if (!dir.equals("."))
+            if (!".".equals(dir))
                 new File(dir).mkdirs();
         }
 

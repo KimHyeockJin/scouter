@@ -133,12 +133,12 @@ public class Compiler {
         int n = -1;
         for (int i = 0; i < args.length; ++i) {
             String a = args[i];
-            if (a.equals("-m"))
+            if ("-m".equals(a))
                 if (n < 0 || i + 1 > args.length)
                     return -1;
                 else
                     result[n].metaobject = args[++i];
-            else if (a.equals("-c"))
+            else if ("-c".equals(a))
                 if (n < 0 || i + 1 > args.length)
                     return -1;
                 else

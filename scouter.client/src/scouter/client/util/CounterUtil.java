@@ -34,7 +34,7 @@ public class CounterUtil {
 		}
 		String unit = server.getCounterEngine().getCounterUnit(objType, counter);
 		if (StringUtil.isNotEmpty(unit)) {
-			return unit.trim().equals("%");
+			return "%".equals(unit.trim());
 		}
 		return false;
 	}

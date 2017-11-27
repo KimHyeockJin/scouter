@@ -67,10 +67,10 @@ public class Ulimit extends SigarCommandBase {
 
         for (int i=0; i<args.length; i++) {
             String arg = args[i];
-            if (arg.equals("-H")) {
+            if ("-H".equals(arg)) {
                 this.mode = "Max";
             }
-            else if (arg.equals("-S")) {
+            else if ("-S".equals(arg)) {
                 this.mode = "Cur";
             }
             else {

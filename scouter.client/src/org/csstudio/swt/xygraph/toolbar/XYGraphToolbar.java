@@ -240,7 +240,7 @@ public class XYGraphToolbar extends Figure {
 			final ToggleModel model = new ToggleModel();
 			model.addChangeListener(new ChangeListener(){
 				public void handleStateChanged(ChangeEvent event) {
-					if(event.getPropertyName().equals("selected") && 
+					if("selected".equals(event.getPropertyName()) &&
 							button.isSelected()){
 						xyGraph.setZoomType(zoomType);
 					}				

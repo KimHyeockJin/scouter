@@ -122,7 +122,7 @@ class CtClassType extends CtClass {
             CtClass ext = getSuperclass();
             if (ext != null) {
                 String name = ext.getName();
-                if (!name.equals("java.lang.Object"))
+                if (!"java.lang.Object".equals(name))
                     buffer.append(" extends " + ext.getName());
             }
         }

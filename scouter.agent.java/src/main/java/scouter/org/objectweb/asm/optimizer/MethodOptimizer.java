@@ -142,7 +142,7 @@ public class MethodOptimizer extends MethodRemapper implements Opcodes {
         // rewrite boxing method call to use constructor to keep 1.3/1.4
         // compatibility
         String[] constructorParams;
-        if (opcode == INVOKESTATIC && name.equals("valueOf")
+        if (opcode == INVOKESTATIC && "valueOf".equals(name)
                 && (constructorParams = BOXING_MAP.get(owner + desc)) != null) {
             String type = constructorParams[0];
             String initDesc = constructorParams[1];

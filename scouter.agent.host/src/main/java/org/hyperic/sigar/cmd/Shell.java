@@ -145,7 +145,7 @@ public class Shell extends ShellBase {
             if (args[0].indexOf("=") > 0) {
                 pids = ProcessFinder.find(sigar, args[0]);
             }
-            else if (args[0].equals("$$")) {
+            else if ("$$".equals(args[0])) {
                 pids = new long[] { sigar.getPid() };
             }
             else {
@@ -167,7 +167,7 @@ public class Shell extends ShellBase {
 
     public long[] findPids(String[] args) throws SigarException {
 
-        if ((args.length == 1) && args[0].equals("-")) {
+        if ((args.length == 1) && "-".equals(args[0])) {
             return this.foundPids;
         }
 

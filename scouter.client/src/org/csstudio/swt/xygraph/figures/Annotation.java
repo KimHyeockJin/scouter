@@ -392,7 +392,7 @@ public class Annotation extends Figure implements IAxisListener, IDataProviderLi
 		String info = "";		
 		if(showName)
 			info = name;
-		if(showSampleInfo && currentSnappedSample != null && !currentSnappedSample.getInfo().equals(""))
+		if(showSampleInfo && currentSnappedSample != null && !"".equals(currentSnappedSample.getInfo()))
 			info += "\n" + currentSnappedSample.getInfo();
 		if(showPosition)
 				info += "\n" + "(" + xAxis.format(xValue) + ", " + 
